@@ -2,9 +2,13 @@
   "name": "tvmaze-watchlist",
   "author": "jyntran",
   "version": "1.0.0",
-  "keywords": ["pebble-app"],
+  "keywords": [
+    "pebble-app"
+  ],
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "pebble-clay": "^1.0.4"
+  },
   "pebble": {
     "displayName": "TVmaze Watchlist",
     "uuid": "500ce7b8-a07c-43f8-950c-c45d7bf969e6",
@@ -20,7 +24,7 @@
       "watchface": false
     },
     "messageKeys": [
-      "dummy"
+      "ApiKey"
     ],
     "resources": {
       "media": []

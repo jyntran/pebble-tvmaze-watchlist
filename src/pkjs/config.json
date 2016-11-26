@@ -1,0 +1,27 @@
+[
+  {
+    "type": "heading",
+    "defaultValue": "TVmaze Watchlist"
+  },
+  {
+    "type": "text",
+    "defaultValue": "NOTE: This watchapp can only be used if you have a TVmaze Premium membership (Bronze/Silver/Gold)."
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "input",
+        "messageKey": "ApiKey",
+        "defaultValue": "",
+        "label": "User API Key",
+        "description": "Found on your <a href='https://www.tvmaze.com/dashboard' alt='TVmaze Dashboard'>Dashboard page</a>"
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save Settings"
+  }
+]
+
