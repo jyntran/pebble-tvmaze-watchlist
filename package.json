@@ -1,0 +1,29 @@
+{
+  "name": "tvmaze-watchlist",
+  "author": "jyntran",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {},
+  "pebble": {
+    "displayName": "TVmaze Watchlist",
+    "uuid": "500ce7b8-a07c-43f8-950c-c45d7bf969e6",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite"
+    ],
+    "watchapp": {
+      "watchface": false
+    },
+    "messageKeys": [
+      "dummy"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}
