@@ -3,8 +3,6 @@
 static Window *s_window;
 
 static void prv_window_load(Window *window) {
-  Layer *s_window_layer = window_get_root_layer(window);
-  GRect bounds = layer_get_bounds(s_window_layer);
 }
 
 static void prv_window_unload(Window *window) {

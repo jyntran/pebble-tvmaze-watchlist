@@ -10,4 +10,5 @@ typedef struct ClaySettings {
 struct ClaySettings settings;
 
 void prv_load_settings();
+void prv_save_settings();
 
