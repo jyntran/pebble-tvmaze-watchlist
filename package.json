@@ -25,7 +25,9 @@
     },
     "messageKeys": [
       "JSReady",
-      "ApiKey"
+      "ApiKey",
+      "SHOWID",
+      "SHOWNAME"
     ],
     "resources": {
       "media": []

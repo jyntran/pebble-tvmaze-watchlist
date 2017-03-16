@@ -1,6 +1,29 @@
 #include "comm.h"
 
 static void inbox_received_handler(DictionaryIterator *iter, void *context) {
+
+// Store incoming information
+static char showid_buffer[8];
+static char showname_buffer[64];
+static char show_buffer[64];
+
+// Read data
+Tuple *showid_tuple = dict_find(iter, MESSAGE_KEY_SHOWID);
+Tuple *showname_tuple = dict_find(iter, MESSAGE_KEY_SHOWNAME);
+
+// If data, use it
+if (showid_tuple) {
+  snprintf(showid_buffer, sizeof(showid_buffer), "%d", (int)showid_tuple->value->int32);
+  snprintf(showname_buffer, sizeof(showname_buffer), "%s", showname_tuple->value->cstring);
+
+  // Assemble full string then display
+  snprintf(show_buffer, sizeof(show_buffer), "%s, %s", showid_buffer, showname_buffer);
+
+  // Test data module
+  data_set_array_value(0, (int)showid_tuple->value->int32);
+  APP_LOG(APP_LOG_LEVEL_INFO, "Get data: show id is %d", data_get_array_value(0));
+}
+
   APP_LOG(APP_LOG_LEVEL_INFO, "Message received!");
 
   Tuple *js_ready_t = dict_find(iter, MESSAGE_KEY_JSReady);

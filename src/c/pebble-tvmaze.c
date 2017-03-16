@@ -1,9 +1,11 @@
 #include <pebble.h>
 #include "modules/comm.h"
+#include "modules/data.h"
 #include "modules/settings.h"
 #include "windows/main_window.h"
 
 static void prv_init(void) {
+  data_init(128);
   comm_init();
   prv_load_settings();
   prv_window_push();
@@ -11,6 +13,7 @@ static void prv_init(void) {
 
 static void prv_deinit(void) {
   comm_deinit();
+  data_deinit();
 }
 
 int main(void) {
