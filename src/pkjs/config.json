@@ -12,6 +12,13 @@
     "items": [
       {
         "type": "input",
+        "messageKey": "User",
+        "defaultValue": "",
+        "label": "Username",
+        "description": "TVmaze username"
+      },
+      {
+        "type": "input",
         "messageKey": "ApiKey",
         "defaultValue": "",
         "label": "User API Key",

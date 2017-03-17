@@ -25,6 +25,7 @@
     },
     "messageKeys": [
       "JSReady",
+      "User",
       "ApiKey",
       "SHOWID",
       "SHOWNAME"
