@@ -27,8 +27,7 @@
       "JSReady",
       "User",
       "ApiKey",
-      "SHOWID",
-      "SHOWNAME"
+      "Followed"
     ],
     "resources": {
       "media": []

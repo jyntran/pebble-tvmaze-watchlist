@@ -29,16 +29,21 @@ function getFollowedShows() {
       // responseText contains a JSON object with weather info
       var json = JSON.parse(responseText);
 
-      var showid = json[0].show_id;
-      console.log('Show_id is ' + showid);
+      var followed = "";
+      var delimiter = "|";
 
-      var showname = json[0]._embedded.show.name;      
-      console.log('Show name is ' + showname);
+      for (int i=0; i<json.length; i++) {
+        followed = followed
+		   + json[i].show_id + delimiter
+		   + json.[i]._embedded.show.name + delimiter;
+      }
+
+      console.log('followed:');
+      console.log(followed);
 
 		// Assemble dictionary using our keys
 		var dictionary = {
-		  'SHOWID': showid,
-		  'SHOWNAME': showname
+		  'followed': followed
 		};
 
 		// Send to Pebble
